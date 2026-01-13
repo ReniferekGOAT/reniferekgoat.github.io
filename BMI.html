@@ -1,30 +1,55 @@
 <html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />  
-  <title>[ Tytul dokumentu ]</title>
+  <title>Oblicz BMI</title>
 </head>
+
 <body>
 <h1>Oblicz BMI</h1>
 <hr>
-<script language="JavaScript">
 
+<script language="JavaScript">
 function dziel() {
-/* Odwołanie do formularza i jego elementów przez nazwę*/
-var skl1=parseFloat(document.test.a.value);
-var skl2=parseFloat(document.test.b.value);
-var wynik = skl1/(skl2*skl2);
-if((wynik)<=18.5) {alert("niedowaga")}
-if((wynik)>=18.5 && (wynik)<=25) {alert("dobre bmi")}
-if((wynik)>=25){ alert("nadwaga")};
+
+    var waga = parseFloat(document.test.a.value);
+    var wzrost = parseFloat(document.test.b.value);
+
+    // Sprawdzenie czy podano liczby
+    if (isNaN(waga) || isNaN(wzrost)) {
+        alert("Podaj poprawne liczby!");
+        return;
+    }
+
+    // Walidacja wagi
+    if (waga <= 0 || waga >= 200) {
+        alert("Waga musi być w przedziale 0-200 kg");
+        return;
+    }
+
+    // Walidacja wzrostu (w metrach ? 1m-2.5m)
+    if (wzrost <= 1.0 || wzrost >= 2.5) {
+        alert("Wzrost musi być w przedziale 1.0-2.5 m");
+        return;
+    }
+
+    var wynik = waga / (wzrost * wzrost);
+
+    if (wynik < 18.5) {
+        alert("Niedowaga (BMI = " + wynik.toFixed(2) + ")");
+    } else if (wynik < 25) {
+        alert("Prawidłowe BMI (BMI = " + wynik.toFixed(2) + ")");
+    } else {
+        alert("Nadwaga (BMI = " + wynik.toFixed(2) + ")");
+    }
 }
 </script>
 
 <form name="test">
-waga w kg<input type="Text" name="a"><br>
-wzrost w metrach<input type="Text" name="b"><br>
-<input type="Button" value="Oblicz BMI" onclick="dziel()">
+waga w kg <input type="text" name="a"><br>
+wzrost w metrach <input type="text" name="b"><br>
+<input type="button" value="Oblicz BMI" onclick="dziel()">
 </form>
-<hr>
 
+<hr>
 </body>
 </html>
