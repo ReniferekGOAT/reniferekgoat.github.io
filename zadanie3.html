@@ -8,91 +8,66 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
     body {
         min-height: 100vh;
         background: linear-gradient(135deg, #000, #111);
         color: #f5e6a8;
         padding: 40px;
     }
-
     .container {
         max-width: 1000px;
-        margin: auto;
+        margin:auto;
         background: rgba(0,0,0,0.7);
-        border: 1px solid #d4af37;
+        border: 2px solid #d4af37;
         border-radius: 20px;
         padding: 40px;
         box-shadow: 0 0 40px rgba(212,175,55,0.25);
         animation: fadeIn 1.2s ease;
     }
-
     h1 {
         text-align: center;
         color: #d4af37;
         margin-bottom: 30px;
         text-shadow: 0 0 15px rgba(212,175,55,0.6);
     }
-
     .image-box img {
         width: 100%;
         max-width: 500px;
         border-radius: 15px;
         border: 2px solid #d4af37;
-        box-shadow: 0 0 25px rgba(212,175,55,0.35);
         margin-bottom: 25px;
-        transition: 0.3s;
     }
-
-    .image-box img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 35px rgba(212,175,55,0.6);
-    }
-
     p {
         line-height: 1.7;
         margin-bottom: 20px;
         font-size: 1.05rem;
     }
-
     .media {
         margin: 25px 0;
     }
-
-    embed {
+    embed, audio, video {
         width: 100%;
-        border-radius: 15px;
+        max-width: 600px;
+        display: block;
+        margin: 10px 0;
+        border-radius: 12px;
         border: 2px solid #d4af37;
-        box-shadow: 0 0 20px rgba(212,175,55,0.3);
+        background: #000;
     }
-
     a {
         color: #d4af37;
         text-decoration: none;
         border-bottom: 1px solid transparent;
         transition: 0.3s;
     }
-
     a:hover {
         border-bottom: 1px solid #d4af37;
         text-shadow: 0 0 10px #d4af37;
     }
-
     @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity:0; transform: translateY(30px); }
+        to { opacity:1; transform: translateY(0); }
     }
 </style>
 </head>
@@ -100,7 +75,6 @@
 <body>
 
 <div class="container">
-
     <h1>Zadanie 3 – Prezentacja programu</h1>
 
     <div class="image-box">
@@ -113,4 +87,28 @@
     </p>
 
     <div class="media">
-        <p>
+        <p><b>Nagranie dźwiękowe:</b></p>
+        <audio controls>
+            <source src="https://reniferekgoat.github.io/głosówka.mp3" type="audio/mpeg">
+            Twoja przeglądarka nie obsługuje odtwarzacza audio.
+        </audio>
+    </div>
+
+    <div class="media">
+        <p><b>Nagranie wideo:</b></p>
+        <video controls>
+            <source src="nagrywanie ekranu strona internetowa.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje odtwarzacza wideo.
+        </video>
+    </div>
+
+    <p>
+        <a href="https://learn.microsoft.com/pl-pl/cpp/windows/walkthrough-creating-a-standard-cpp-program-cpp?view=msvc-170" target="_blank">
+            Pomoc w tworzeniu programu C++
+        </a>
+    </p>
+
+</div>
+
+</body>
+</html>
