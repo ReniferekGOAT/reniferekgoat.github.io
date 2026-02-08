@@ -1,158 +1,115 @@
 <!doctype html>
 <html lang="pl">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Informacje o młodym rugbiście z Siedlec">
-    <title>Zadanie 1 – Marcel Bulik</title>
+<meta charset="utf-8">
+<meta name="description" content="Prezentacja programu – zrzut ekranu i omówienie">
+<title>Zadanie 3 – Prezentacja</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #000, #111);
-            color: #f5e6a8;
-            padding: 40px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: rgba(0,0,0,0.7);
-            border: 1px solid #d4af37;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 0 40px rgba(212,175,55,0.25);
-            animation: fadeIn 1.2s ease;
-        }
-
-        h1 {
-            text-align: center;
-            color: #d4af37;
-            margin-bottom: 30px;
-            text-shadow: 0 0 15px rgba(212,175,55,0.6);
-        }
-
-        p {
-            line-height: 1.7;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-
-        .highlight-blue {
-            color: #6ca8ff;
-            font-weight: 500;
-        }
-
-        .highlight-green {
-            color: #7CFC98;
-            font-weight: 500;
-        }
-
-        hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #d4af37, transparent);
-            margin: 30px 0;
-        }
-
-        a {
-            color: #d4af37;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            border-bottom: 1px solid #d4af37;
-            text-shadow: 0 0 10px #d4af37;
-        }
-
-        .images {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .images img {
-            width: 250px;
-            border-radius: 15px;
-            border: 2px solid #d4af37;
-            box-shadow: 0 0 20px rgba(212,175,55,0.3);
-            transition: 0.3s;
-        }
-
-        .images img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(212,175,55,0.6);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #000, #111);
+        color: #f5e6a8;
+        padding: 40px;
+    }
+    .container {
+        max-width: 1000px;
+        margin:auto;
+        background: rgba(0,0,0,0.7);
+        border: 2px solid #d4af37;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 0 40px rgba(212,175,55,0.25);
+        animation: fadeIn 1.2s ease;
+    }
+    h1 {
+        text-align: center;
+        color: #d4af37;
+        margin-bottom: 30px;
+        text-shadow: 0 0 15px rgba(212,175,55,0.6);
+    }
+    .image-box img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 15px;
+        border: 2px solid #d4af37;
+        margin-bottom: 25px;
+    }
+    p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+    .media {
+        margin: 25px 0;
+    }
+    audio, video {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: 10px 0;
+        border-radius: 12px;
+        border: 2px solid #d4af37;
+        background: #000;
+    }
+    a {
+        color: #d4af37;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: 0.3s;
+    }
+    a:hover {
+        border-bottom: 1px solid #d4af37;
+        text-shadow: 0 0 10px #d4af37;
+    }
+    @keyframes fadeIn {
+        from { opacity:0; transform: translateY(30px); }
+        to { opacity:1; transform: translateY(0); }
+    }
+</style>
 </head>
 
 <body>
 
 <div class="container">
+    <h1>Zadanie 3 – Prezentacja programu</h1>
 
-    <h1><u>Kim jest Marcel Bulik?</u></h1>
+    <div class="image-box">
+        <img src="https://reniferekgoat.github.io/zrzut_ekranu_strona_internetowa.png" alt="Zrzut ekranu programu">
+    </div>
 
     <p>
-        <b>Młody rugbista z Siedlec</b>, zawodnik <i>MKS Pogoń Awenta Siedlce</i>.<br><br>
-
-        <span class="highlight-blue">
-            Reprezentant Polski <sup>U16</sup>
-        </span> – brał udział w zgrupowaniach i meczach kadry narodowej.<br><br>
-
-        <span class="highlight-green">
-            Reprezentant Mazowsza <sub>U18</sub>
-        </span> – powoływany na zgrupowania wojewódzkie przygotowujące do mistrzostw Europy.<br><br>
-
-        <span style="font-size:18px; color:#d4af37;">
-            Aktywny sportowiec lokalny
-        </span> – uczestniczył także w zawodach lekkoatletycznych, m.in. biegach przełajowych szkół ponadpodstawowych w Siedlcach.<br><br>
-
-        <span style="font-size:18px; color:#d4af37;">
-            Ulubiony szkoleniowiec
-        </span> – Marcel w wielu wywiadach mówi, że jest nim Maciej Misiak.
+        Powyższy program przedstawia prezentację Marcela Bulika w programie C++.
+        Praca wykonana przez Huberta Derlatkę.
     </p>
 
-    <hr>
+    <div class="media">
+        <p><b>Nagranie dźwiękowe:</b></p>
+        <audio controls>
+            <source src="glosowka.mp3" type="audio/mpeg">
+            Twoja przeglądarka nie obsługuje audio.
+        </audio>
+    </div>
+
+    <div class="media">
+        <p><b>Nagranie wideo:</b></p>
+        <video controls>
+            <source src="nagrywanie.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje wideo.
+        </video>
+    </div>
 
     <p>
-        Odwiedź stronę klubu:
-        <a href="https://www.pogon.siedlce.pl/" target="_blank">
-            MKS Pogoń Awenta Siedlce
+        Odwiedź stronę z pomocą w tworzeniu programu:
+        <a href="https://learn.microsoft.com/pl-pl/cpp/windows/walkthrough-creating-a-standard-cpp-program-cpp?view=msvc-170" target="_blank">
+            Microsoft C++ Tutorial
         </a>
     </p>
-
-    <div class="images">
-        <img src="bulik.jpg" alt="Marcel Bulik">
-        <img src="buliczek.jpg" alt="Marcel Bulik">
-        <img src="bulis.jpg" alt="Marcel Bulik">
-    </div>
 
 </div>
 
 </body>
 </html>
-
-
