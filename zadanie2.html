@@ -1,83 +1,215 @@
 <!doctype html>
-<html>
+<html lang="pl">
 <head>
     <meta charset="utf-8">
-    <title>Zadanie 2</title>
+    <title>Zadanie 2 – Sport</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #000, #111);
+            color: #f5e6a8;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(0,0,0,0.7);
+            border: 1px solid #d4af37;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 40px rgba(212,175,55,0.25);
+            animation: fadeIn 1.2s ease;
+        }
+
+        h1, h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(212,175,55,0.6);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        .blue {
+            color: #6ca8ff;
+            font-weight: 500;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: 30px 0;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        dl {
+            margin-bottom: 30px;
+        }
+
+        dt {
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #d4af37;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: rgba(212,175,55,0.15);
+            color: #d4af37;
+        }
+
+        tr:hover {
+            background: rgba(212,175,55,0.08);
+        }
+
+        a {
+            color: #d4af37;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #d4af37;
+            text-shadow: 0 0 10px #d4af37;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<h1><u>Moja strona o sporcie</u></h1>
+<div class="container">
 
-<p>
-    <b>Sport</b> to <i>ważny element życia</i> wielu ludzi.<br>
-    <span style="color:blue;">Uprawianie sportu</span> rozwija ciało i umysł.<br>
-    Wzór na energię: E = mc<sup>2</sup><br>
-    Wzór chemiczny wody: H<sub>2</sub>O<br>
-    <span style="font-family:Verdana; font-size:18px;">Przykład czcionki i wielkości</span>
-</p>
+    <h1><u>Moja strona o sporcie</u></h1>
 
-<hr>
+    <p>
+        <b>Sport</b> to <i>ważny element życia</i> wielu ludzi.<br>
+        <span class="blue">Uprawianie sportu</span> rozwija ciało i umysł.<br>
+        Wzór na energię: E = mc<sup>2</sup><br>
+        Wzór chemiczny wody: H<sub>2</sub>O<br>
+        <span style="font-size:18px;">Przykład czcionki i wielkości</span>
+    </p>
 
-<h2>Lista wypunktowana</h2>
-<ul type="square">
-    <li>Piłka nożna</li>
-    <li>Rugby</li>
-    <li>Koszykówka</li>
-</ul>
+    <hr>
 
-<h2>Lista numerowana</h2>
-<ol type="A">
-    <li>Trening</li>
-    <li>Regeneracja</li>
-    <li>Dieta</li>
-</ol>
+    <h2>Lista wypunktowana</h2>
+    <ul type="square">
+        <li>Piłka nożna</li>
+        <li>Rugby</li>
+        <li>Koszykówka</li>
+    </ul>
 
-<h2>Lista definicji</h2>
-<dl>
-    <dt><b>Sport</b></dt>
-    <dd>Aktywność fizyczna rozwijająca ciało i umysł.</dd>
-    <dt><b>Rugby</b></dt>
-    <dd>Drużynowa gra kontaktowa.</dd>
-    <dt><b>Piłka nożna</b></dt>
-    <dd>Najpopularniejszy sport zespołowy na świecie.</dd>
-</dl>
+    <h2>Lista numerowana</h2>
+    <ol type="A">
+        <li>Trening</li>
+        <li>Regeneracja</li>
+        <li>Dieta</li>
+    </ol>
 
-<h2>Tabela</h2>
-<table border="1" width="70%">
-    <tr bgcolor="lightblue">
-        <th>Dyscyplina</th>
-        <th>Zawodnik</th>
-        <th>Uwagi</th>
-    </tr>
-    <tr>
-        <td rowspan="2">Rugby</td>
-        <td>Marcel Bulik</td>
-        <td>Reprezentant Polski U16</td>
-    </tr>
-    <tr>
-        <td colspan="2">Zawodnik MKS Pogoń Siedlce</td>
-    </tr>
-    <tr>
-        <td>Piłka nożna</td>
-        <td>Robert Lewandowski</td>
-        <td>Kapitan reprezentacji Polski</td>
-    </tr>
-    <tr>
-        <td>Koszykówka</td>
-        <td>Michael Jordan</td>
-        <td>Legenda NBA</td>
-    </tr>
-    <tr>
-        <td>Lekkoatletyka</td>
-        <td>Anita Włodarczyk</td>
-        <td>Mistrzyni olimpijska</td>
-    </tr>
-</table>
+    <h2>Lista definicji</h2>
+    <dl>
+        <dt>Sport</dt>
+        <dd>Aktywność fizyczna rozwijająca ciało i umysł.</dd>
+        <dt>Rugby</dt>
+        <dd>Drużynowa gra kontaktowa.</dd>
+        <dt>Piłka nożna</dt>
+        <dd>Najpopularniejszy sport zespołowy na świecie.</dd>
+    </dl>
 
-<p>
-    Odwiedź stronę klubu: 
-    <a href="https://www.pogon.siedlce.pl/" target="_blank">MKS Pogoń Awenta Siedlce</a>
-</p>
+    <h2>Tabela</h2>
+    <table>
+        <tr>
+            <th>Dyscyplina</th>
+            <th>Zawodnik</th>
+            <th>Uwagi</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Rugby</td>
+            <td>Marcel Bulik</td>
+            <td>Reprezentant Polski U16</td>
+        </tr>
+        <tr>
+            <td colspan="2">Zawodnik MKS Pogoń Siedlce</td>
+        </tr>
+        <tr>
+            <td>Piłka nożna</td>
+            <td>Robert Lewandowski</td>
+            <td>Kapitan reprezentacji Polski</td>
+        </tr>
+        <tr>
+            <td>Koszykówka</td>
+            <td>Michael Jordan</td>
+            <td>Legenda NBA</td>
+        </tr>
+        <tr>
+            <td>Lekkoatletyka</td>
+            <td>Anita Włodarczyk</td>
+            <td>Mistrzyni olimpijska</td>
+        </tr>
+    </table>
+
+    <p>
+        Odwiedź stronę klubu:
+        <a href="https://www.pogon.siedlce.pl/" target="_blank">
+            MKS Pogoń Awenta Siedlce
+        </a>
+    </p>
+
+</div>
 
 </body>
 </html>
