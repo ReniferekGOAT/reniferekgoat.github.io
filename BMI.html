@@ -1,55 +1,123 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />  
-  <title>Oblicz BMI</title>
+<meta charset="UTF-8">
+<title>Oblicz BMI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #000, #111);
+        color: #f5e6a8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+    }
+    .container {
+        background: rgba(0,0,0,0.8);
+        border: 2px solid #d4af37;
+        border-radius: 25px;
+        padding: 50px 40px;
+        width: 400px;
+        max-width: 90%;
+        box-shadow: 0 0 50px rgba(212,175,55,0.3);
+        animation: fadeIn 1.2s ease;
+    }
+    h1 {
+        text-align: center;
+        color: #d4af37;
+        margin-bottom: 30px;
+        text-shadow: 0 0 15px rgba(212,175,55,0.6);
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="text"] {
+        font-size: 1.3rem;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        border: 2px solid #d4af37;
+        background: #111;
+        color: #f5e6a8;
+    }
+    input[type="button"] {
+        font-size: 1.4rem;
+        padding: 15px;
+        border-radius: 15px;
+        border: 2px solid #d4af37;
+        background: #000;
+        color: #d4af37;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 15px rgba(212,175,55,0.3);
+    }
+    input[type="button"]:hover {
+        background: #d4af37;
+        color: #000;
+        transform: scale(1.05);
+        box-shadow: 0 0 25px #d4af37;
+    }
+    hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #d4af37, transparent);
+        margin: 25px 0;
+    }
+    @keyframes fadeIn {
+        from { opacity:0; transform: translateY(30px); }
+        to { opacity:1; transform: translateY(0); }
+    }
+</style>
 </head>
 
 <body>
-<h1>Oblicz BMI</h1>
-<hr>
 
-<script language="JavaScript">
-function dziel() {
+<div class="container">
+    <h1>Oblicz BMI</h1>
 
+    <form name="test">
+        waga w kg <input type="text" name="a" placeholder="np. 70">
+        wzrost w metrach <input type="text" name="b" placeholder="np. 1.75">
+        <input type="button" value="Oblicz BMI" onclick="obliczBMI()">
+    </form>
+
+    <hr>
+</div>
+
+<script>
+function obliczBMI() {
     var waga = parseFloat(document.test.a.value);
     var wzrost = parseFloat(document.test.b.value);
 
-    // Sprawdzenie czy podano liczby
     if (isNaN(waga) || isNaN(wzrost)) {
         alert("Podaj poprawne liczby!");
         return;
     }
-
-    // Walidacja wagi
     if (waga <= 0 || waga >= 200) {
-        alert("Waga musi być w przedziale 0-200 kg");
+        alert("Waga musi byÄ w przedziale 0-200 kg");
         return;
     }
-
-    // Walidacja wzrostu (w metrach ? 1m-2.5m)
     if (wzrost <= 1.0 || wzrost >= 2.5) {
-        alert("Wzrost musi być w przedziale 1.0-2.5 m");
+        alert("Wzrost musi byÄ w przedziale 1.0-2.5 m");
         return;
     }
 
     var wynik = waga / (wzrost * wzrost);
-
     if (wynik < 18.5) {
         alert("Niedowaga (BMI = " + wynik.toFixed(2) + ")");
     } else if (wynik < 25) {
-        alert("Prawidłowe BMI (BMI = " + wynik.toFixed(2) + ")");
+        alert("PrawidĹowe BMI (BMI = " + wynik.toFixed(2) + ")");
     } else {
         alert("Nadwaga (BMI = " + wynik.toFixed(2) + ")");
     }
 }
 </script>
 
-<form name="test">
-waga w kg <input type="text" name="a"><br>
-wzrost w metrach <input type="text" name="b"><br>
-<input type="button" value="Oblicz BMI" onclick="dziel()">
-</form>
-
-<hr>
 </body>
 </html>
