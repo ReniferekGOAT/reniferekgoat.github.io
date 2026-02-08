@@ -1,85 +1,162 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />  
-  <title>[ Tytul dokumentu ]</title>
+<meta charset="UTF-8">
+<title>Kalkulator działań</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #000, #111);
+        color: #f5e6a8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .container {
+        background: rgba(0,0,0,0.8);
+        border: 2px solid #d4af37;
+        border-radius: 25px;
+        padding: 40px;
+        width: 400px;
+        max-width: 90%;
+        box-shadow: 0 0 50px rgba(212,175,55,0.3);
+        animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+        text-align: center;
+        color: #d4af37;
+        margin-bottom: 30px;
+        text-shadow: 0 0 15px rgba(212,175,55,0.6);
+    }
+
+    form {
+        margin-bottom: 25px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+        border: 2px solid #d4af37;
+        background: #111;
+        color: #f5e6a8;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        border: 2px solid #d4af37;
+        background: #000;
+        color: #d4af37;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+
+    input[type="button"]:hover {
+        background: #d4af37;
+        color: #000;
+        transform: scale(1.05);
+        box-shadow: 0 0 25px #d4af37;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #d4af37, transparent);
+        margin: 25px 0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
 </head>
 <body>
-<hr>
-<script language="JavaScript">
 
+<div class="container">
+    <h1>Kalkulator działań</h1>
+
+    <form name="Form">
+        a=<input type="text" name="a">
+        b=<input type="text" name="b">
+        <input type="button" value="Suma" onclick="dodawanie()">
+    </form>
+
+    <hr>
+
+    <form name="test">
+        a=<input type="text" name="a">
+        b=<input type="text" name="b">
+        <input type="button" value="Iloczyn" onclick="mnozenie()">
+    </form>
+
+    <hr>
+
+    <form name="bad">
+        a=<input type="text" name="jakas_wymyslona_nazwa2">
+        b=<input type="text" name="jakas_wymyslona_nazwa3">
+        <input type="button" value="Różnica" onclick="odejmowanie()">
+    </form>
+
+    <hr>
+
+    <form name="hubert">
+        a=<input type="text" name="a">
+        b=<input type="text" name="b">
+        <input type="button" value="Iloraz" onclick="dziel()">
+    </form>
+
+</div>
+
+<script>
 function dodawanie() {
-/* Odwołanie do formularza i jego elementów przez nazwę*/
-var skl1=parseFloat(document.Form.a.value);
-var skl2=parseFloat(document.Form.b.value);
-var wynik = skl1+skl2;
-alert(wynik);
+    var skl1=parseFloat(document.Form.a.value);
+    var skl2=parseFloat(document.Form.b.value);
+    var wynik = skl1 + skl2;
+    alert(wynik);
 }
-</script>
-
-<form name="Form">
-a=<input type="Text" name="a"><br>
-b=<input type="Text" name="b"><br>
-<input type="Button" value="suma" onclick="dodawanie()">
-</form>
-
-
-<hr>
-
-<script language="JavaScript">
 
 function mnozenie() {
-/* Odwołanie do formularza i jego elementów przez nazwę*/
-var skl1=parseFloat(document.test.a.value);
-var skl2=parseFloat(document.test.b.value);
-var wynik = skl1*skl2;
-alert(wynik);
+    var skl1=parseFloat(document.test.a.value);
+    var skl2=parseFloat(document.test.b.value);
+    var wynik = skl1 * skl2;
+    alert(wynik);
 }
-</script>
 
-<form name="test">
-a=<input type="Text" name="a"><br>
-b=<input type="Text" name="b"><br>
-<input type="Button" value="Iloczyn" onclick="mnozenie()">
-</form>
-<hr>
-
-<script language="JavaScript">
 function odejmowanie() {
-/* Odwołanie do formularza i jego elementów przez indeks
-Formularz o nazwie jakas_wymyslona_nazwa1 jest drugim formularzem w dokumencie więc ma indeks równy 1
-Pole tekstowe o nazwie jakas_wymyslona_nazwa2 jest pierwszym elementem formularza więc ma indeks równy 0
-*/
-var skl1=parseFloat(document.forms[2].elements[0].value);
-var skl2=parseFloat(document.forms[2].elements[1].value);
-var wynik = skl1-skl2;
-alert(wynik);
+    var skl1=parseFloat(document.forms[2].elements[0].value);
+    var skl2=parseFloat(document.forms[2].elements[1].value);
+    var wynik = skl1 - skl2;
+    alert(wynik);
 }
-</script>
-
-<form name="bad">
-a=<input type="Text" name="jakas_wymyslona_nazwa2"><br>
-b=<input type="Text" name="jakas_wymyslona_nazwa3"><br>
-<input type="Button" value="roznica" onclick="odejmowanie()">
-</form>
-<hr>
-
-<script language="JavaScript">
 
 function dziel() {
-/* Odwołanie do formularza i jego elementów przez nazwę*/
-var skl1=parseFloat(document.hubert.a.value);
-var skl2=parseFloat(document.hubert.b.value);
-var wynik = skl1/skl2;
-alert(wynik);
+    var skl1=parseFloat(document.hubert.a.value);
+    var skl2=parseFloat(document.hubert.b.value);
+    var wynik = skl1 / skl2;
+    alert(wynik);
 }
 </script>
-
-<form name="hubert">
-a=<input type="Text" name="a"><br>
-b=<input type="Text" name="b"><br>
-<input type="Button" value="Iloraz" onclick="dziel()">
-</form>
-<hr>
 
 </body>
 </html>
